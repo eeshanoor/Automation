@@ -7,6 +7,8 @@ public class SampleTest extends BaseTest {
         @Test
         public void sampleMethodForEmailEntering() throws InterruptedException {
             HomePageEvents homePageEvents = new HomePageEvents();
+
+            //You have to change it to dynamic loader
             Thread.sleep(60000);
             homePageEvents.clickOnSignInButton();
 

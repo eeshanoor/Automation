@@ -4,16 +4,28 @@ import pageEvents.HomePageEvents;
 import pageEvents.LoginPageEvents;
 
 public class SampleTest extends BaseTest {
-        @Test
+        @Test (priority = 1)
         public void sampleMethodForEmailEntering() throws InterruptedException {
-            HomePageEvents homePageEvents = new HomePageEvents();
-
+           HomePageEvents homePageEvents = new HomePageEvents();
             //You have to change it to dynamic loader
-            Thread.sleep(60000);
+            //Thread.sleep(60000);
             homePageEvents.clickOnSignInButton();
-
             LoginPageEvents loginPageEvents = new LoginPageEvents();
-            //loginPageEvents.verifyLoginPageOpenOrNot();
-            loginPageEvents.enterEmailId();
+            loginPageEvents.VerifyNewUserSignUP();
+            loginPageEvents.enterNameAndEmailId();
+            loginPageEvents.clickSignUpButton();
+            loginPageEvents.verifyEnterAccountInfoDisplayed();
+            loginPageEvents.enterAccountInfo();
+            loginPageEvents.clickSignUpForNewsLetter();
+            loginPageEvents.addAddressInformation();
+            loginPageEvents.clickCreateAccount();
+            loginPageEvents.verifyAccountCreated();
+            loginPageEvents.clickContinueButton();
+            loginPageEvents.clickDeleteAccountButton();
         }
+
+
+
+
+
 }

@@ -17,7 +17,7 @@ public class ElementFetch {
             case "TAGNAME":
                 return BaseTest.driver.findElement(By.tagName(identifierValue));
             case "XPath":
-                BaseTest.driver.findElement(By.xpath(identifierValue));
+                return BaseTest.driver.findElement(By.xpath(identifierValue));
             default:
                 return null;
         }

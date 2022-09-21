@@ -1,5 +1,5 @@
 package utils;
 
 public interface Constants {
-    String URL = "http://automationpractice.com";
+    String URL = "https://automationexercise.com/";
 }
